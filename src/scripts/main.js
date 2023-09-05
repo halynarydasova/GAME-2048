@@ -1,6 +1,5 @@
 'use strict';
 
-// write your code here
 const score = document.querySelector('.game-score');
 const initializeGameBtn = document.querySelector('.button.start');
 const gameOver = document.querySelector('.message-lose');
@@ -57,7 +56,6 @@ function startGame() {
   initializeGameBtn.classList.remove('start');
   initializeGameBtn.classList.add('restart');
   initializeGameBtn.textContent = 'Restart';
-  score.textContent = '0';
 
   if (!youWin.classList.contains('hidden')) {
     youWin.classList.add('hidden');
@@ -70,6 +68,7 @@ function startGame() {
   addNumber();
   addNumber();
   render();
+  score.textContent = '0';
 }
 
 function setScore() {
